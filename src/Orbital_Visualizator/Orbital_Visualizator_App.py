@@ -1,3 +1,8 @@
+import 3D_Plot_Orbital_Vizualizator
+import GUI_Orbital_Visualizator
+import Keplerian2Cartesian_Convertor
+
+
 def Orbit_Visualizator(): #with entenred parameter or TLE
     """
         Open the tool to visualize an orbit from TLE or direct keplerian parameters.
