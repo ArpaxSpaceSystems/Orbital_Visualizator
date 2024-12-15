@@ -1,6 +1,5 @@
-import 3D_Plot_Orbital_Vizualizator
-import GUI_Orbital_Visualizator
-import Keplerian2Cartesian_Convertor
+from 3D_Plot_Orbital_Vizualizator import plot_central_body, plot_orbit, 
+from GUI_Orbital_Visualizator import select_data
 
 
 def Orbit_Visualizator(): #with entenred parameter or TLE
