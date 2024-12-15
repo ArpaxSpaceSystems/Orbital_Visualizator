@@ -1,5 +1,6 @@
-from 3D_Plot_Orbital_Vizualizator import plot_central_body, plot_orbit, 
+from Plot_Orbital_Vizualizator import plot_central_body, plot_orbit
 from GUI_Orbital_Visualizator import select_data
+import matplotlib.pyplot as plt
 
 
 def Orbit_Visualizator(): #with entenred parameter or TLE

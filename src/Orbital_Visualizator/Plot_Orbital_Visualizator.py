@@ -1,3 +1,8 @@
+import numpy as np
+from mpl_toolkits.mplot3d import Axes3D
+from Keplerian2Cartesian_Calculator import Orbit_Calculation
+from typing import Union, Tuple
+
 def plot_central_body(space:Axes3D, radius: Union[int, float], color: str) -> None:  #function to plot the central body considered
     """
         Plots the surface of the central body around which the satellite orbits.

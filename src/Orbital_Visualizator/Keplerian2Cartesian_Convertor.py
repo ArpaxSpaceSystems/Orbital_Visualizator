@@ -1,3 +1,6 @@
+from typing import Union, Tuple
+import numpy as np
+
 def Orbit_Calculation(orbital_parameters:list,theta: Union[float, np.ndarray]) -> Tuple[Union[float, np.ndarray], ...]:
     """
         Converts Keplerian parameters into Cartesian coordinates in the inertial frame J2000.

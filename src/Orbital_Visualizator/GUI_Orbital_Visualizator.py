@@ -1,3 +1,11 @@
+import tkinter as tk
+from tkinter import messagebox, Text, Entry, StringVar, Tk, Frame, Label
+from skyfield.api import EarthSatellite
+import numpy as np
+from typing import Union, Tuple
+
+
+
 def submit_parameters(option:StringVar, entry_tle:Text, name_tle:Text, entry_param:list[Entry], window:Tk, Orbital_Parameters:list[Union[float, str]]) -> None:
     """
         Handles the submission of orbital parameters from the user interface.
@@ -118,7 +126,7 @@ def select_data(Orbital_Parameters: list)->None:              #function to open 
         Orbital_Parameters_Variable[i]=tk.Entry(frame_parameters)
         Orbital_Parameters_Variable[i].grid(row=i, column=1, padx=5, pady=5)
 
-    tles_option.trace("w", lambda *args: toggle_fields(tles_option, label_tle, entry_tle, entry_name_label, entry_name_value, frame_parameters))    #line to update visibility of field according to option chosen (TLE or direct parameters)
+    tles_option.trace_add("w", lambda *args: toggle_fields(tles_option, label_tle, entry_tle, entry_name_label, entry_name_value, frame_parameters))    #line to update visibility of field according to option chosen (TLE or direct parameters)
 
     btn_submit = tk.Button(entry_window, text="Submit", command=lambda: submit_parameters(tles_option, entry_tle, entry_name_value,Orbital_Parameters_Variable,entry_window, Orbital_Parameters))
     btn_submit.pack(pady=20) #Button for submission
