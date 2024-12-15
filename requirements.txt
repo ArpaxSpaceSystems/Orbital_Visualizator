@@ -1,0 +1,6 @@
+#Packages to install
+
+skyfield.api
+matplotlib.pyplot
+numpy
+mpl_toolkits.mplot3d
