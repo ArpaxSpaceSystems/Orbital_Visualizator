@@ -12,7 +12,7 @@ pytest
 #wheel
 #ai-core-sdk[aicore-content]
 #Cython<3
-#sphinx
-#sphinx-autobuild
-#sphinx-rtd-theme
+sphinx
+sphinx-autobuild
+sphinx-rtd-theme
 coverage

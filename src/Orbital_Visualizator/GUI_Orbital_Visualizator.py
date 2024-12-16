@@ -1,3 +1,11 @@
+"""
+    This module contains all functions to handle the graphic user interface including invoking
+    a window, manage visibility within this GUI and handle submission of data entered by user in
+    window's text widgets.
+    Author : Baptiste LEBON
+    Date : 16 december 2024
+"""
+
 from typing import Union
 import tkinter as tk
 from tkinter import messagebox, Text, Entry, StringVar, Tk, Frame, Label
@@ -84,7 +92,7 @@ def toggle_fields(
     label_name: Label,
     name: Entry,
     parameters: Frame,
-) -> None:  # function to determine visibility of fields depending on the chosen option
+) -> None:
     """
     Manages visibility of fields in the GUI based on the choice made by the user: either 
     TLE or direct orbital parameters.
@@ -115,7 +123,7 @@ def toggle_fields(
 
 def select_data(
     orbital_parameters: list,
-) -> None:  # function to open an user interface to give orbital parameters
+) -> None:
     """
     Configures and displays the GUI to enter TLE or direct orbital parameters.
 

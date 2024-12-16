@@ -1,3 +1,11 @@
+"""
+    This module is used to convert Keplerian parameters into Cartesian parameters in the J2000
+    frame.
+    Author : Baptiste LEBON
+    Date : 16 december 2024
+"""
+
+
 from typing import Union, Tuple
 import numpy as np
 

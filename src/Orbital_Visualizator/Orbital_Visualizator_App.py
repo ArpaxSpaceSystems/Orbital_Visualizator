@@ -1,9 +1,16 @@
-from plot_orbital_visualizator import plot_central_body, plot_orbit
-from gui_orbital_visualizator import select_data
+"""
+    This module allows to invoke a graphic user interface and plot the entered orbit around Earth.
+    Author : Baptiste LEBON
+    Date : 16 december 2024
+"""
+
+
 import matplotlib.pyplot as plt
+from orbital_visualizator.gui_orbital_visualizator import select_data
+from orbital_visualizator.plot_orbital_visualizator import plot_central_body, plot_orbit
 
 
-def orbit_visualizator():  # with entenred parameter or TLE
+def orbit_visualizator():
     """
     Open the tool to visualize an orbit from TLE or direct keplerian parameters.
 
