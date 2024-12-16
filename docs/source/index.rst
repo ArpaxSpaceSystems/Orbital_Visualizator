@@ -31,10 +31,8 @@ orbital_visualization_app
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. toctree::
-
+   
    This module allows to invoke a graphic user interface and plot the entered orbit around Earth.
-
-
 
 `orbit_visualizator(source="tle"):`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
