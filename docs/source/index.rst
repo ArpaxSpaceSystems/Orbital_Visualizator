@@ -13,17 +13,19 @@ documentation for details.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents: This documentation contains all methods and functions used in the Orbital Visualizator package. This package 
-   aims to give a graphic representation of an orbite of a satellite around a central body. For this, the user is asked to input either
-   a TLE (Two Line Elements) or directly from Keplerian parameters.
-   This package contains the following modules:
-   *gui_orbital_visualizator
-   *keplerian_to_cartesian_convertor
-   *keplerian_to_cartesian_convertor
-   *keplerian_to_cartesian_convertor
+   :caption: Contents: 
    
-   It also contains an example file:
-   *__main__
+This documentation contains all methods and functions used in the Orbital Visualizator package. This package 
+aims to give a graphic representation of an orbite of a satellite around a central body. For this, the user is asked to input either
+a TLE (Two Line Elements) or directly from Keplerian parameters.
+This package contains the following modules:
+*gui_orbital_visualizator
+*keplerian_to_cartesian_convertor
+*keplerian_to_cartesian_convertor
+*keplerian_to_cartesian_convertor
+   
+It also contains an example file:
+*__main__
 
 
 
