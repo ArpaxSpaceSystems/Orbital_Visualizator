@@ -1,0 +1,36 @@
+name: Build Documentation
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          pip install sphinx
+          pip install recommonmark  # ou myst-parser
+          pip install sphinx-markdown-builder
+
+      - name: Build documentation
+        run: sphinx-build -b markdown docs/source docs/build
+
+      - name: Commit and push markdown files
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+          git add docs/build
+          git commit -m "Mise à jour de la documentation"
+          git push
