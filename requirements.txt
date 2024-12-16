@@ -1,8 +1,4 @@
-#Packages to install
-
-#skyfield.api>=1.49
-#matplotlib.pyplot>=3.5.2
-#numpy>=1.26.1
+#Packages to install for executing
 
 skyfield
 matplotlib

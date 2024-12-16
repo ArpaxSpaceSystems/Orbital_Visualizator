@@ -1,0 +1,6 @@
+#Packages to install for testing
+
+pytest
+coverage
+black
+pylint

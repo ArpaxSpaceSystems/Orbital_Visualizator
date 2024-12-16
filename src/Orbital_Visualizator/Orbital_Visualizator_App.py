@@ -9,7 +9,7 @@ from .gui_orbital_visualizator import select_data
 from .plot_orbital_visualizator import plot_central_body, plot_orbit
 
 
-def orbit_visualizator(source='tle'):
+def orbit_visualizator(source="tle"):
     """
     Open the tool to visualize an orbit from TLE or direct keplerian parameters.
 
@@ -20,7 +20,7 @@ def orbit_visualizator(source='tle'):
 
     **Warning:** As this project is in its early phase of development, no validation is
     implemented to verify the relevance or correctness of the user-provided values.
-    :param source: A string to choose format of input data, should be 'tle' or 'keplerian', default 
+    :param source: A string to choose format of input data, should be 'tle' or 'keplerian', default
     is 'tle'
     :return: None. The orbit, the satellite's position and the central body are directly displayed
     on the created 3D object.
@@ -34,8 +34,8 @@ def orbit_visualizator(source='tle'):
 
     select_data(orbital_parameters, source)  # call user interface for data inputs
 
-    #print(orbital_parameters)
-    #print("cc")
+    # print(orbital_parameters)
+    # print("cc")
 
     if not orbital_parameters:  # exit the function if the user interface is closed
         return

@@ -8,7 +8,7 @@
 
 from typing import Union
 import tkinter as tk
-from tkinter import messagebox, Text, Entry, StringVar, Tk, Frame, Label, ttk
+from tkinter import messagebox, Text, Entry, Tk, Frame, Label
 from skyfield.api import EarthSatellite
 import numpy as np
 
@@ -77,7 +77,7 @@ def submit_parameters(
             else:
                 break
         orbital_parameters.append(entry_param[6].get())
-        
+
         if all(element for element in orbital_parameters):
             window.quit()
             window.destroy()
@@ -110,7 +110,6 @@ def toggle_fields(
      parameters.
     :return: None. The function directly modifies the visibility of the provided widgets.
     """
-    print(option)
 
     if option == "tle":
         label.pack(pady=5)
@@ -125,8 +124,8 @@ def toggle_fields(
         name.pack_forget()
         parameters.pack(pady=10)
 
-def select_data(orbital_parameters: list, tles_option:str) -> None:
-    
+
+def select_data(orbital_parameters: list, tles_option: str) -> None:
     """
     Configures and displays the GUI to enter TLE or direct orbital parameters.
 
@@ -149,12 +148,12 @@ def select_data(orbital_parameters: list, tles_option:str) -> None:
     orbital_parameters_variable = ["a", "e", "i", "RAAN", "OMEGA", "M", "name"]
     entry_window = tk.Tk()  # main window creation
     entry_window.title("Orbital parameters selection")
-    #icone = tk.PhotoImage(file="src\orbital_visualizator\orbito_logo.png")     #not working
-    #entry_window.iconphoto(True, icone)
+    # icone = tk.PhotoImage(file="src\orbital_visualizator\orbito_logo.png")     #not working
+    # entry_window.iconphoto(True, icone)
 
     # TLE
     frame_options = tk.Frame(entry_window)
-    frame_options.pack(pady=10)  # Frame for TLE 
+    frame_options.pack(pady=10)  # Frame for TLE
 
     label_tle = tk.Label(entry_window, text="Please enter TLE (in two lines):")
     label_tle.pack(pady=5)  # Text box for TLE
@@ -188,7 +187,7 @@ def select_data(orbital_parameters: list, tles_option:str) -> None:
         ),
     )
     btn_submit.pack(pady=20)  # Button for submission
-    
+
     toggle_fields(
         tles_option,
         label_tle,
@@ -197,7 +196,7 @@ def select_data(orbital_parameters: list, tles_option:str) -> None:
         entry_name_value,
         frame_parameters,
     )  # Initialize visible fields
-    
-    entry_window.protocol("WM_DELETE_WINDOW", entry_window.quit )
-    
+
+    entry_window.protocol("WM_DELETE_WINDOW", entry_window.quit)
+
     entry_window.mainloop()  # Keep the user interface opened
