@@ -24,8 +24,6 @@ This package contains the following modules:
 It also contains an example file:
 * __main__
 
-
-
 Modules and functions explanations
 ----------------------------------
 
