@@ -22,7 +22,7 @@ This package contains the following modules:
 * plot_orbital_visualization
    
 It also contains an example file:
-* __main__
+* main
 
 
 
