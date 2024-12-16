@@ -5,7 +5,6 @@
     Date : 16 december 2024
 """
 
-
 from typing import Union, Tuple
 import numpy as np
 
@@ -16,7 +15,7 @@ def orbit_calculation(
     """
     Converts Keplerian parameters into Cartesian coordinates in the inertial frame J2000.
     :param orbital_parameters: List of Keplerian parameters provided by the user.
-    :param theta: The true anomaly of the satellite. This can be a float (for a specific 
+    :param theta: The true anomaly of the satellite. This can be a float (for a specific
     position)or an np.ndarray (for orbit propagation over time).
     :return: Cartesian coordinates (x, y, z) of the orbit in the inertial frame J2000.
     The output type matches the input `theta` (float or np.ndarray).

@@ -4,25 +4,24 @@
     Date : 16 december 2024
 """
 
-
 import matplotlib.pyplot as plt
-from orbital_visualizator.gui_orbital_visualizator import select_data
-from orbital_visualizator.plot_orbital_visualizator import plot_central_body, plot_orbit
+from .gui_orbital_visualizator import select_data
+from .plot_orbital_visualizator import plot_central_body, plot_orbit
 
 
-def orbit_visualizator():
+def orbit_visualizator(source='tle'):
     """
     Open the tool to visualize an orbit from TLE or direct keplerian parameters.
 
-    This method launches  GUI provided by the `select_data()` method allowing the user to enter 
+    This method launches  GUI provided by the `select_data()` method allowing the user to enter
     orbital parameters (either TLE and direct orbital parameters).
-    It creates a 3D representation of considered orbit and the central body (e.g., Earth) using 
+    It creates a 3D representation of considered orbit and the central body (e.g., Earth) using
     `plot_orbit()` and `plot_central_body()` methods.
 
-    **Warning:** As this project is in its early phase of development, no validation is 
+    **Warning:** As this project is in its early phase of development, no validation is
     implemented to verify the relevance or correctness of the user-provided values.
-
-    :param: None.
+    :param source: A string to choose format of input data, should be 'tle' or 'keplerian', default 
+    is 'tle'
     :return: None. The orbit, the satellite's position and the central body are directly displayed
     on the created 3D object.
     """
@@ -33,7 +32,10 @@ def orbit_visualizator():
     fig = plt.figure()
     space = fig.add_subplot(111, projection="3d")
 
-    select_data(orbital_parameters)  # call user interface for data inputs
+    select_data(orbital_parameters, source)  # call user interface for data inputs
+
+    #print(orbital_parameters)
+    #print("cc")
 
     if not orbital_parameters:  # exit the function if the user interface is closed
         return

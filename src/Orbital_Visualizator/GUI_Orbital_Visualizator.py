@@ -8,13 +8,13 @@
 
 from typing import Union
 import tkinter as tk
-from tkinter import messagebox, Text, Entry, StringVar, Tk, Frame, Label
+from tkinter import messagebox, Text, Entry, StringVar, Tk, Frame, Label, ttk
 from skyfield.api import EarthSatellite
 import numpy as np
 
 
 def submit_parameters(
-    option: StringVar,
+    option: str,
     entry_tle: Text,
     name_tle: Text,
     entry_param: list[Entry],
@@ -26,22 +26,22 @@ def submit_parameters(
 
     This method is triggered when the submit button is clicked.
     This function is triggered when the submit button is clicked. It extracts
-    and validates user inputs from the provided widgets, then updates the global 
+    and validates user inputs from the provided widgets, then updates the global
     Orbital_Parameters list.
     Used within the `select_data()` method.
 
-    :param option: A `tkinter.StringVar` holding the user's choice between TLE and 
-    direct orbital parameters
+    :param option: A string holding the user's choice between tle and keplerian
     :param entry_tle: A `tkinter.Text` widget containing the two lines element
     :param name_tle: A `tkinter.Text` widget containing the name of the satellite
     :param entry_param: A list of `tkinter.Entry` widgets for direct orbital parameters
     :param window: The `tkinter.Tk` instance of the user interface window.
-    :param Orbital_Parameters: A global list to store the keplerian orbital parameters including 
+    :param Orbital_Parameters: A global list to store the keplerian orbital parameters including
     TLE data or direct parameters.
     :return: None. The parameters are directly appended to the `Orbital_Parameters` list.
     """
+
     mu_earth = 398600.4418  # km^3 / s^2
-    if option.get() == "TLE":
+    if option == "tle":
         tle_line_1 = entry_tle.get("1.0", "1.end").strip()
         tle_line_2 = entry_tle.get("2.0", "2.end").strip()
         if (tle_line_1) and (tle_line_2) and (name_tle):
@@ -64,6 +64,7 @@ def submit_parameters(
             orbital_parameters.append(satellite.model.argpo)  # in radian
             orbital_parameters.append(satellite.model.mo)  # in radian
             orbital_parameters.append(satellite.name)
+            window.quit()
             window.destroy()
         else:
             orbital_parameters.clear()
@@ -76,7 +77,9 @@ def submit_parameters(
             else:
                 break
         orbital_parameters.append(entry_param[6].get())
+        
         if all(element for element in orbital_parameters):
+            window.quit()
             window.destroy()
         else:
             orbital_parameters.clear()
@@ -86,7 +89,7 @@ def submit_parameters(
 
 
 def toggle_fields(
-    option: StringVar,
+    option: str,
     label: Label,
     entry: Text,
     label_name: Label,
@@ -94,11 +97,11 @@ def toggle_fields(
     parameters: Frame,
 ) -> None:
     """
-    Manages visibility of fields in the GUI based on the choice made by the user: either 
+    Manages visibility of fields in the GUI based on the choice made by the user: either
     TLE or direct orbital parameters.
     It is used within the `select_data()` method.
 
-    :param option: A `tkinter.StringVar` containing the user's choice ("TLE" or "direct").
+    :param option: A string containing the user's choice ("tle" or "keplerian").
     :param label: A `tkinter.Label` widget for the TLE input
     :param entry: A `tkinter.Text` widget where TLE data is entered.
     :param label_name: A `tkinter.Label` widget for the satellite's name (TLE option).
@@ -107,7 +110,9 @@ def toggle_fields(
      parameters.
     :return: None. The function directly modifies the visibility of the provided widgets.
     """
-    if option.get() == "TLE":
+    print(option)
+
+    if option == "tle":
         label.pack(pady=5)
         entry.pack(pady=5)
         label_name.pack(padx=5, pady=5)
@@ -120,17 +125,16 @@ def toggle_fields(
         name.pack_forget()
         parameters.pack(pady=10)
 
-
-def select_data(
-    orbital_parameters: list,
-) -> None:
+def select_data(orbital_parameters: list, tles_option:str) -> None:
+    
     """
     Configures and displays the GUI to enter TLE or direct orbital parameters.
 
-    This method launches a GUI to allow the user to enter either TLE or direct orbital 
+    This method launches a GUI to allow the user to enter either TLE or direct orbital
     parameters (keplerian).
     The provided data are saved into the `Orbital_Parameters` list.
     :param Orbital_Parameters: A list containing the global orbital parameters
+    :param tles_option: A string to choose format of input data, should be 'tle' or 'keplerian'
     :return: None. This function modifies the `Orbital_Parameters` list directly.
     """
     label = [
@@ -145,26 +149,13 @@ def select_data(
     orbital_parameters_variable = ["a", "e", "i", "RAAN", "OMEGA", "M", "name"]
     entry_window = tk.Tk()  # main window creation
     entry_window.title("Orbital parameters selection")
-    icone = tk.PhotoImage(file="Orbito_Logo.png")
-    entry_window.iconphoto(True, icone)
+    #icone = tk.PhotoImage(file="src\orbital_visualizator\orbito_logo.png")     #not working
+    #entry_window.iconphoto(True, icone)
 
     # TLE
-    tles_option = tk.StringVar(value="TLE")  # TLE or parameters choice variable
     frame_options = tk.Frame(entry_window)
-    frame_options.pack(pady=10)  # Frame for TLE
-    label_option = tk.Label(frame_options, text="Choose an option :")
-    label_option.pack(side=tk.LEFT)
-    radio_tle = tk.Radiobutton(
-        frame_options, text="TLE", variable=tles_option, value="TLE"
-    )
-    radio_tle.pack(side=tk.LEFT)
-    radio_parametres = tk.Radiobutton(
-        frame_options,
-        text="Orbital parameters",
-        variable=tles_option,
-        value="Paramètres Orbitaux",
-    )
-    radio_parametres.pack(side=tk.LEFT)
+    frame_options.pack(pady=10)  # Frame for TLE 
+
     label_tle = tk.Label(entry_window, text="Please enter TLE (in two lines):")
     label_tle.pack(pady=5)  # Text box for TLE
     entry_tle = tk.Text(entry_window, width=70, height=2)
@@ -184,18 +175,6 @@ def select_data(
         orbital_parameters_variable[i] = tk.Entry(frame_parameters)
         orbital_parameters_variable[i].grid(row=i, column=1, padx=5, pady=5)
 
-    tles_option.trace_add(
-        "w",
-        lambda *args: toggle_fields(
-            tles_option,
-            label_tle,
-            entry_tle,
-            entry_name_label,
-            entry_name_value,
-            frame_parameters,
-        ),
-    )  # line to update visibility of field according to option chosen (TLE or direct parameters)
-
     btn_submit = tk.Button(
         entry_window,
         text="Submit",
@@ -209,7 +188,7 @@ def select_data(
         ),
     )
     btn_submit.pack(pady=20)  # Button for submission
-
+    
     toggle_fields(
         tles_option,
         label_tle,
@@ -218,4 +197,7 @@ def select_data(
         entry_name_value,
         frame_parameters,
     )  # Initialize visible fields
+    
+    entry_window.protocol("WM_DELETE_WINDOW", entry_window.quit )
+    
     entry_window.mainloop()  # Keep the user interface opened
