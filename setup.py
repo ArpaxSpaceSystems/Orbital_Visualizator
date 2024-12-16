@@ -13,6 +13,8 @@ setup(
             "Orbite_Visualizator=Orbite_Visualizator.Orbite_Visualizator_App:main",
         ]
     },
+    include_package_data=True,
+
     author="Baptiste LEBON",
     description="Visualize in a 3D space an orbit from a TLE or direct Keplerian parameters given by user.",
     long_description=open("README.md").read(),
