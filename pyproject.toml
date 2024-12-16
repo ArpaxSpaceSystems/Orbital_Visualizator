@@ -1,7 +1,7 @@
 [project]
 name = "Orbital_Visualizator"
 version = "0.01"
-authors = [{name = "Baptiste LEBON, email = "Baptiste.LEBON@estaca.eu}]
+authors = [{name = "Baptiste LEBON", email = "Baptiste.LEBON@estaca.eu"},]
 
 description = "Gives a 3D representation of a given orbit from TLE (Two Lines Elements) or directly from Keplerian paramaters."
 readme="README.md"
@@ -17,7 +17,7 @@ Orbital_Visualizator = "Orbital_Visualizator:Orbit_Visualizator"
 
 [tool.coverage.run]
 
-omit = ["*/script/*]
+omit = ["*/script/*"]
 
 [build-system]
 requires = ["setuptools", "wheel"]

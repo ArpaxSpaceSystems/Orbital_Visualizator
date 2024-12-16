@@ -1,6 +1,11 @@
 #Packages to install
 
-skyfield.api
-matplotlib.pyplot
+#skyfield.api>=1.49
+#matplotlib.pyplot>=3.5.2
+#numpy>=1.26.1
+
+skyfield
+matplotlib
 numpy
-mpl_toolkits.mplot3d
+setuptools
+pytest

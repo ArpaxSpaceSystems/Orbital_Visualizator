@@ -3,8 +3,11 @@ from setuptools import setup, find_packages
 setup(
     name="Orbital_Visualizator",
     version="0.1.0",
-    packages=find_packages(),
-    install_requires=["skyfield.api", "matplotlib.pyplot", "numpy", "mpl_toolkits.mplot3d"],
+    packages=find_packages(where="src"),
+    package_dir={"":"src"},
+    install_requires=[
+        line.strip() for line in open("requirements.txt").readlines()
+    ],
     entry_points={
         "console_scripts": [
             "Orbite_Visualizator=Orbite_Visualizator.Orbite_Visualizator_App:main",
