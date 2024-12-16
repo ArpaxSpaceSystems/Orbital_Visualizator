@@ -68,15 +68,16 @@ gui_orbital_visualizator
     a window, manage visibility within this GUI and handle submission of data entered by user in
     window's text widgets.
 
-`submit_parameters(
+submit_parameters(
     option: str,
     entry_tle: Text,
     name_tle: Text,
     entry_param: list[Entry],
     window: Tk,
     orbital_parameters: list[Union[float, str]],
-) -> None:`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+) -> None:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 .. toctree::
 
@@ -98,14 +99,14 @@ gui_orbital_visualizator
     :return: None. The parameters are directly appended to the `Orbital_Parameters` list.
 
 
-`toggle_fields(
+toggle_fields(
     option: str,
     label: Label,
     entry: Text,
     label_name: Label,
     name: Entry,
     parameters: Frame,
-) -> None:`
+) -> None:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. toctree::
@@ -165,9 +166,9 @@ keplerian_to_cartesian_convertor
     frame.
 
 
-`orbit_calculation(
+orbit_calculation(
     orbital_parameters: list, theta: Union[float, np.ndarray]
-) -> Tuple[Union[float, np.ndarray], ...]:`
+) -> Tuple[Union[float, np.ndarray], ...]:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. toctree::
@@ -220,8 +221,7 @@ plot_orbital_visualization
 
 
 
-
-__main__
+main
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. toctree::
