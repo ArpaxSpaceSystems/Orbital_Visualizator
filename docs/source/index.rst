@@ -32,9 +32,11 @@ Modules and functions explanations
 orbital_visualization_app
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. toctree::
+
 
    This module allows to invoke a graphic user interface and plot the entered orbit around Earth.
+
+This module allows to invoke a graphic user interface and plot the entered orbit around Earth.
 
 
 
