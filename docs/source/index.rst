@@ -10,6 +10,13 @@ This documentation contains all methods and functions used in the Orbital Visual
 aims to give a graphic representation of an orbite of a satellite around a central body. For this, the user is asked to input either
 a TLE (Two Line Elements) or directly from Keplerian parameters.
 
+It contains 4 modules and 1 main as example:
+
+- orbital_visualization_app
+- gui_orbital_visualizator
+- keplerian_to_cartesian_convertor
+- plot_orbital_visualization
+- __main__
 
 
 
@@ -23,15 +30,15 @@ This module allows to invoke a graphic user interface and plot the entered orbit
 
 
 orbit_visualizator(
-     source="tle")->None:`
+     source="tle")->None:
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Opens the tool to visualize an orbit from TLE or direct keplerian parameters.
 
-This method launches  GUI provided by the `select_data()` method allowing the user to enter
+This method launches  GUI provided by the ``select_data()`` method allowing the user to enter
 orbital parameters (either TLE and direct orbital parameters).
 It creates a 3D representation of considered orbit and the central body (e.g., Earth) using
-`plot_orbit()` and `plot_central_body()` methods.
+``plot_orbit()`` and ``plot_central_body()`` methods.
 
 **Warning:** As this project is in its early phase of development, no validation is
 implemented to verify the relevance or correctness of the user-provided values.
@@ -64,13 +71,13 @@ This method is triggered when the submit button is clicked.
 This function is triggered when the submit button is clicked. It extracts
 and validates user inputs from the provided widgets, then updates the global
 Orbital_Parameters list.
-Used within the `select_data()` method.
+Used within the ``select_data()`` method.
 
-:option: A string holding the user's choice between tle and keplerian
-:entry_tle: A `tkinter.Text` widget containing the two lines element
-:name_tle: A `tkinter.Text` widget containing the name of the satellite
-:entry_param: A list of `tkinter.Entry` widgets for direct orbital parameters
-:window: The `tkinter.Tk` instance of the user interface window.
+:option: A String holding the user's choice between tle and keplerian
+:entry_tle: A ``tkinter.Text`` widget containing the two lines element
+:name_tle: A ``tkinter.Text`` widget containing the name of the satellite
+:entry_param: A list of ``tkinter.Entry`` widgets for direct orbital parameters
+:window: The ``tkinter.Tk`` instance of the user interface window.
 :orbital_parameters: A global list to store the keplerian orbital parameters including TLE data or direct parameters.
 :return: None. The parameters are directly appended to the `Orbital_Parameters` list.
 
@@ -91,12 +98,12 @@ Manages visibility of fields in the GUI based on the choice made by the user: ei
 TLE or direct orbital parameters.
 It is used within the `select_data()` method.
 
-:option: A string containing the user's choice ("tle" or "keplerian").
-:label: A `tkinter.Label` widget for the TLE input
-:entry: A `tkinter.Text` widget where TLE data is entered.
-:label_name: A `tkinter.Label` widget for the satellite's name (TLE option).
-:name: A `Entry` tkinter.widget for entering the satellite's name (TLE option).
-:parameters: A `tkinter.Frame` widget containing all input fields for direct orbital parameters.
+:option: A String containing the user's choice ("tle" or "keplerian").
+:label: A ``tkinter.Label`` widget for the TLE input
+:entry: A ``tkinter.Text`` widget where TLE data is entered.
+:label_name: A ``tkinter.Label`` widget for the satellite's name (TLE option).
+:name: A ``Entry`` tkinter.widget for entering the satellite's name (TLE option).
+:parameters: A ``tkinter.Frame`` widget containing all input fields for direct orbital parameters.
 :return: None. The function directly modifies the visibility of the provided widgets.
 
 
@@ -182,7 +189,7 @@ main
 ^^^^
 
 This is the main method and it runs as an exemple. It can be executed directly in the 
-prompt using python `src/__main__.py` command.
+prompt using python ``src/__main__.py`` command.
 
 
 main():
