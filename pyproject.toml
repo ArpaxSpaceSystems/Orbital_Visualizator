@@ -18,3 +18,7 @@ Orbital_Visualizator = "Orbital_Visualizator:Orbit_Visualizator"
 [tool.coverage.run]
 
 omit = ["*/script/*]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"

@@ -1,3 +1,5 @@
 {
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestArgs": ["Tests"],
     "makefile.extensionOutputFolder": "./.vscode"
 }
