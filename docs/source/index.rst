@@ -120,20 +120,6 @@ The provided data are saved into the `Orbital_Parameters` list.
 :return: None. This function modifies the `Orbital_Parameters` list directly.
 
 
-select_data(orbital_parameters: list, tles_option: str) -> None:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Configures and displays the GUI to enter TLE or direct orbital parameters.
-
-This method launches a GUI to allow the user to enter either TLE or direct orbital
-parameters (keplerian).
-The provided data are saved into the `Orbital_Parameters` list.
-:orbital_parameters: A list containing the global orbital parameters
-:tles_option: A string to choose format of input data, should be 'tle' or 'keplerian'
-:return: None. This function modifies the `Orbital_Parameters` list directly.
-
-
-
 
 keplerian_to_cartesian_convertor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
