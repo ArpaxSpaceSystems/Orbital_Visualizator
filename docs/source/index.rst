@@ -6,6 +6,8 @@
 Orbital Visualizator documentation
 ==================================
 
+This document explain how to install Orbital Visualizator tool via pip.
+
 This documentation contains all methods and functions used in the Orbital Visualizator package. This package 
 aims to give a graphic representation of an orbite of a satellite around a central body. For this, the user is asked to input either
 a TLE (Two Line Elements) or directly from Keplerian parameters.
@@ -22,6 +24,31 @@ It contains 4 modules and 1 main as example:
 There are also instructions at the end about testing.
 
 **Warning** ``test_visualization`` **test requires interaction as it involves graphic user interface. For the test, a TLE can can be found in** ``tle_example.txt``.
+
+
+
+Installation
+------------
+
+Pip install
+^^^^^^^^^^^
+
+It is possible to install ``orbital_visualizator`` directly through the pip install command.
+To install Orbital Visualizator, type ``pip install orbital_visualizator`` in the command. It can also be found at https://pypi.org/project/Orbital-Visualizator/0.1/ .
+
+Import in Python project
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Then to import it in your Python project type ``import orbital_visualizator``.
+
+
+Example
+^^^^^^^
+
+For exemple, to directly open the tool. The following code can be implemented:
+
+``from orbital_visualizator.orbital_visualizator_app import orbit_visualizator
+Orbit_visualizator('keplerian')``
 
 
 Modules and functions explanations
