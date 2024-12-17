@@ -6,9 +6,8 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # R�PONDRE � UN BESOIN PARTICULIER.
 
 # Ce logiciel est construit pour i386-pc-mingw32
- 
 
-# Base de donn�es de Make, imprim�e le Tue Dec 17 07:51:09 2024
+# Base de donn�es de Make, imprim�e le Tue Dec 17 07:59:57 2024
 
 # Variables
 
@@ -153,6 +152,8 @@ SYSTEMROOT = C:\WINDOWS
 # automatique
 +D = $(patsubst %/,%,$(dir $+))
 # environnement
+VSCODE_L10N_BUNDLE_LOCATION = 
+# environnement
 PLATFORMCODE = KV
 # automatique
 +F = $(notdir $+)
@@ -191,7 +192,7 @@ VSCODE_PID = 15952
 # environnement
 USERDOMAIN_ROAMINGPROFILE = LAPTOP-MU7P1M04
 # variables initialis�es dans les statistiques de table de hachage:
-# Charge=89/1024=9%, Refait le hachage=0, Collisions=9/111=8%
+# Charge=90/1024=9%, Refait le hachage=0, Collisions=9/112=8%
 
 # Valeurs de variable avec mod�le sp�cifique
 
@@ -329,6 +330,6 @@ install:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Fin de la base de donn�es de Make le Tue Dec 17 07:51:09 2024
+# Fin de la base de donn�es de Make le Tue Dec 17 07:59:57 2024
 
  

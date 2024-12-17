@@ -9,10 +9,12 @@ Description-Content-Type: text/markdown
 Requires-Dist: numpy
 Requires-Dist: matplotlib
 Requires-Dist: skyfield
-Requires-Dist: importlib-metadata; python_version <= "3.10"
 
 # Orbital_Visualizator
 Gives a 3D representation of a given orbit from TLE (Two Lines Elements) or directly from Keplerian paramaters.
 
 
 Documentation of methods and functions can be found in ``> docs/source > index.rst``
+
+
+The package can be installed via pip using the following command ``pip install Orbital_Visualizator`` or at https://pypi.org/project/Orbital-Visualizator/0.1/
