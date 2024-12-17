@@ -1,5 +1,5 @@
 .PHONY: all
-all: install test sphinx coverage
+all: install test coverage
 
 install:
 	@pip install .
