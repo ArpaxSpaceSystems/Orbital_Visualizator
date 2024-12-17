@@ -1,8 +1,29 @@
+"""
+    This test allows to verify the function orbit_calculation converts well Keplerian coordinates
+    into Cartesian coordinates.
+    Author : Baptiste LEBON
+    Date : 17 december 2024
+"""
+
 from src.orbital_visualizator.keplerian_to_cartesian_convertor import orbit_calculation
 import pytest
 
 
 def test_calcul_orbit():
+    """
+    This function test convertion from Keplerian to Cartesian coordinates for a satellite with
+    the following orbit:
+        a = 36000 km
+        e = 0.00025
+        i = 0.45 rad
+        RAAN = 0.48 rad
+        OMEGA = 0.58 rad
+        M = 1.25 rad
+    These values were taken randomly just to check.
+
+    :param: None.
+    :return: None.
+    """
 
     x, y, z = orbit_calculation(
         orbital_parameters=[36000, 0.00025, 0.45, 0.48, 0.58, 1.25, "Test_Probe"],

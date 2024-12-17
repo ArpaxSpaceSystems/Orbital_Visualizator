@@ -1,12 +1,20 @@
-# from src.orbital_visualizator.orbital_visualizator_app import orbit_visualizator
+"""
+    This test allows to verify if the function plot_orbit doesn't crash.
+    Author : Baptiste LEBON
+    Date : 17 december 2024
+"""
+
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from src.orbital_visualizator.plot_orbital_visualizator import plot_orbit
 
-# orbit_visualizator()
 
-
-def test_display():
+def test_display_orbit():
+    """
+    This function verifies that plot_orbit doesn't crash.
+        :param: None.
+        :return: None.
+    """
     fig = plt.figure()
     space = fig.add_subplot(111, projection="3d")
 

@@ -110,7 +110,7 @@ def toggle_fields(
      parameters.
     :return: None. The function directly modifies the visibility of the provided widgets.
     """
-
+    print(option)
     if option == "tle":
         label.pack(pady=5)
         entry.pack(pady=5)

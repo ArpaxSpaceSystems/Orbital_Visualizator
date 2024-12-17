@@ -6,9 +6,8 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # R�PONDRE � UN BESOIN PARTICULIER.
 
 # Ce logiciel est construit pour i386-pc-mingw32
- 
 
-# Base de donn�es de Make, imprim�e le Mon Dec 16 12:41:16 2024
+# Base de donn�es de Make, imprim�e le Tue Dec 17 02:51:25 2024
 
 # Variables
 
@@ -41,8 +40,7 @@ VSCODE_NLS_CONFIG = {"userLocale":"en-us","osLocale":"fr-fr","resolvedLanguage":
 # environnement
 ONEDRIVE = C:\Users\Baptiste\OneDrive
 # environnement
-PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MS 
-C
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
 # makefile (de � makefile �, ligne 1)
 MAKEFILE_LIST :=  makefile
 # environnement
@@ -78,7 +76,7 @@ ELECTRON_RUN_AS_NODE = 1
 # automatique
 %F = $(notdir $%)
 # environnement
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_19252_QUDIBFWUYSEFNEAV
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_13132_FVCUPYFNMMFKBHOM
 # environnement
 COMPUTERNAME = LAPTOP-MU7P1M04
 # environnement
@@ -188,7 +186,7 @@ PROCESSOR_LEVEL = 6
 # environnement
 FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environnement
-VSCODE_PID = 19252
+VSCODE_PID = 13132
 # environnement
 USERDOMAIN_ROAMINGPROFILE = LAPTOP-MU7P1M04
 # variables initialis�es dans les statistiques de table de hachage:
@@ -206,8 +204,7 @@ USERDOMAIN_ROAMINGPROFILE = LAPTOP-MU7P1M04
 # C:\WINDOWS\System32\WindowsPowerShell\v1.0\ (p�riph�rique C:/WINDOWS/System32/WindowsPowerShell/v1.0/, mtime 1724600624): 30 fichiers, non impossibilit�s.
 # C:\Program Files\Polyspace\R2019a\bin (p�riph�rique C:/Program Files/Polyspace/R2019a/bin, mtime 1582454042): 19 fichiers, non impossibilit�s.
 # C:\WINDOWS\System32\Wbem (p�riph�rique C:/WINDOWS/System32/Wbem, mtime 1720363778): 154 fichiers, non impossibilit�s.
-# . (p�riph�rique c:/Users/Baptiste/Desktop/dossier baba/ESTACA/5A/Python_Project/Orbital_Vis 
-ualizator, mtime 1734323631): 19 fichiers, non impossibilit�s.
+# . (p�riph�rique c:/Users/Baptiste/Desktop/dossier baba/ESTACA/5A/Python_Project/Orbital_Visualizator, mtime 1734383619): 18 fichiers, non impossibilit�s.
 # C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\ (p�riph�rique C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/, mtime 1570888655): 73 fichiers, non impossibilit�s.
 # C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common (p�riph�rique C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common, mtime 1731179821): 5 fichiers, non impossibilit�s.
 # C:\Users\Baptiste\AppData\Local\Programs\Python\Python313\ (p�riph�rique C:/Users/Baptiste/AppData/Local/Programs/Python/Python313/, mtime 1734308705): 17 fichiers, non impossibilit�s.
@@ -222,14 +219,14 @@ ualizator, mtime 1734323631): 19 fichiers, non impossibilit�s.
 # C:\Program Files (x86)\Intel\iCLS Client\ (p�riph�rique C:/Program Files (x86)/Intel/iCLS Client/, mtime 1491430312): 20 fichiers, non impossibilit�s.
 # C:\Program Files\Git\cmd (p�riph�rique C:/Program Files/Git/cmd, mtime 1734288669): 13 fichiers, non impossibilit�s.
 # C:\WINDOWS\system32 (p�riph�rique C:/WINDOWS/system32, mtime 1732797800): 3026 fichiers, non impossibilit�s.
-# C:\Users\Baptiste\AppData\Local\Programs\Python\Python313\Scripts\ (p�riph�rique C:/Users/Baptiste/AppData/Local/Programs/Python/Python313/Scripts/, mtime 1734309103): 7 fichiers, non impossibilit�s.
+# C:\Users\Baptiste\AppData\Local\Programs\Python\Python313\Scripts\ (p�riph�rique C:/Users/Baptiste/AppData/Local/Programs/Python/Python313/Scripts/, mtime 1734386993): 18 fichiers, non impossibilit�s.
 # C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT (p�riph�rique C:/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT, mtime 1491430318): 6 fichiers, non impossibilit�s.
 # C:\Users\Baptiste\AppData\Local\GitHubDesktop\bin (p�riph�rique C:/Users/Baptiste/AppData/Local/GitHubDesktop/bin, mtime 1617542074): 4 fichiers, non impossibilit�s.
 # C:\Users\Baptiste\AppData\Local\Microsoft\WindowsApps (p�riph�rique C:/Users/Baptiste/AppData/Local/Microsoft/WindowsApps, mtime 1734348793): 16 fichiers, non impossibilit�s.
 # C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL (p�riph�rique C:/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL, mtime 1491430318): 10 fichiers, non impossibilit�s.
 # C:\Program Files (x86)\GnuWin32\bin (p�riph�rique C:/Program Files (x86)/GnuWin32/bin, mtime 1734297064): 5 fichiers, non impossibilit�s.
 
-# 3731 fichiers, non impossibilit�s dans 27 r�pertoires.
+# 3741 fichiers, non impossibilit�s dans 27 r�pertoires.
 
 # R�gles Implicites
 
@@ -239,8 +236,7 @@ ualizator, mtime 1734323631): 19 fichiers, non impossibilit�s.
 
 all: install test sphinx coverage
 #  Cible factice (d�pendance de .PHONY).
-#  Cible provenant d 
-e la ligne de commande.
+#  Cible provenant de la ligne de commande.
 #  Recherche de r�gle implicite n'a pas �t� effectu�e.
 # Fichier inexistant.
 #  Fichier a �t� mis � jour.
@@ -255,8 +251,7 @@ e la ligne de commande.
 
 # Pas une cible :
 .DEFAULT:
-#  Recherche de r�gle impl 
-icite n'a pas �t� effectu�e.
+#  Recherche de r�gle implicite n'a pas �t� effectu�e.
 #  Heure de modification jamais v�rifi�e.
 #  Fichier n'a pas �t� mis � jour.
 
@@ -271,11 +266,10 @@ test:
 # Pas une cible :
 makefile:
 #  Recherche de r�gle implicite effectu�e.
-#  Derni�re modification 2024-12-16 01:39:43
+#  Derni�re modification 2024-12-17 00:53:34
 #  Fichier a �t� mis � jour.
 #  Mise � jour r�ussie
-# variables initialis�es dans 
- les statistiques de table de hachage:
+# variables initialis�es dans les statistiques de table de hachage:
 # Charge=0/32=0%, Refait le hachage=0, Collisions=0/0=0%
 
 # Pas une cible :
@@ -288,19 +282,16 @@ coverage:
 #  Recherche de r�gle implicite n'a pas �t� effectu�e.
 #  Heure de modification jamais v�rifi�e.
 #  Fichier n'a pas �t� mis � jour.
-#  commandes � ex�cuter (de � makefile �, ligne 14):
-	@coverage run --source src/Orbital_Visualizator_App -m py 
-test
+#  commandes � ex�cuter (de � makefile �, ligne 11):
+	@coverage run --source src/Orbital_Visualizator -m pytest
 	@coverage report
 	
 
+# Pas une cible :
 sphinx:
 #  Recherche de r�gle implicite n'a pas �t� effectu�e.
 #  Heure de modification jamais v�rifi�e.
 #  Fichier n'a pas �t� mis � jour.
-#  commandes � ex�cuter (de � makefile �, ligne 11):
-	@make -C doc/html
-	
 
 install:
 #  Recherche de r�gle implicite n'a pas �t� effectu�e.
@@ -312,8 +303,7 @@ install:
 # @ := install
 # automatique
 # % := 
-# 
- automatique
+# automatique
 # * := 
 # automatique
 # + := 
@@ -335,8 +325,7 @@ install:
 # Charge=9/1024=1%, Refait le hachage=0, Collisions=0/27=0%
 # Chemins de Recherche VPATH
 
-# Pas de chemins de recherche � vpath �. 
-
+# Pas de chemins de recherche � vpath �.
 
 # Pas de chemin de recherche g�n�ral (variable � VPATH �).
 
@@ -345,6 +334,6 @@ install:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Fin de la base de donn�es de Make le Mon Dec 16 12:41:16 2024
+# Fin de la base de donn�es de Make le Tue Dec 17 02:51:25 2024
 
  
