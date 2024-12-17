@@ -4,9 +4,9 @@
     Author : Baptiste LEBON
     Date : 17 december 2024
 """
-
-from src.orbital_visualizator.keplerian_to_cartesian_convertor import orbit_calculation
 import pytest
+from src.orbital_visualizator.keplerian_to_cartesian_convertor import orbit_calculation
+
 
 
 def test_calcul_orbit():
@@ -32,6 +32,6 @@ def test_calcul_orbit():
 
     assert x == pytest.approx(
         -22312.2, rel=0.1
-    )  # fucntion Orbit_Calculation contains trigonometric function hence approximation for assert tests
+    )   #Orbit_Calculation contains trigonometric function hence approximation for assert tests
     assert y == pytest.approx(23642.43, rel=0.1)
     assert z == pytest.approx(15459.52, rel=0.1)

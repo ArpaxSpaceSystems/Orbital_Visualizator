@@ -5,7 +5,6 @@
 """
 
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 from src.orbital_visualizator.plot_orbital_visualizator import plot_orbit
 
 

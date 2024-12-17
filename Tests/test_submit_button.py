@@ -26,9 +26,9 @@ def test_submit():
         a=36000 km
         e=0.002
         i= 0.25 rad
-        RAAN= 0.35 rad
-        OMEGA= 0.56 rad
-        M= 1.87 rad
+        raan= 0.35 rad
+        omega= 0.56 rad
+        m= 1.87 rad
 
         :param: None.
         :return: None.
@@ -72,15 +72,15 @@ def test_submit():
         e.insert(0, 0.002)
         i = Entry(window)
         i.insert(0, 0.25)
-        RAAN = Entry(window)
-        RAAN.insert(0, 0.35)
-        OMEGA = Entry(window)
-        OMEGA.insert(0, 0.56)
-        M = Entry(window)
-        M.insert(0, 1.87)
+        raan = Entry(window)
+        raan.insert(0, 0.35)
+        omega = Entry(window)
+        omega.insert(0, 0.56)
+        m = Entry(window)
+        m.insert(0, 1.87)
         dummy_name = Entry(window)
         dummy_name.insert(0, "Test_Satellite")
-        dummy_entries = [a, e, i, RAAN, OMEGA, M, dummy_name]
+        dummy_entries = [a, e, i, raan, omega, m, dummy_name]
         orbital_parameters = []
 
         submit_parameters(

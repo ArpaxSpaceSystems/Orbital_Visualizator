@@ -1,5 +1,7 @@
 {
     "python.testing.pytestEnabled": true,
-    "python.testing.pytestArgs": ["tests"],
+    //"python.testing.pytestArgs": ["tests"],
+    "python.testing.pytestArgs": ["--desselect=test_visualization.py::test_to_ignore"],
+    "python.testing.unittestEnabled": false,
     "makefile.extensionOutputFolder": "./.vscode"
 }
