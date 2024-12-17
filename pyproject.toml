@@ -8,7 +8,6 @@ dependencies=[
     "numpy",
     "matplotlib",
     "skyfield",
-    "importlib-metadata ; python_version<='3.10'",
 ]
 
 [build-system]

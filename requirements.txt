@@ -4,7 +4,7 @@ skyfield
 matplotlib
 numpy
 setuptools
-#wheel
+wheel
 #ai-core-sdk[aicore-content]
 #Cython<3
 sphinx
