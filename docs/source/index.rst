@@ -54,7 +54,7 @@ Orbit_visualizator('keplerian')``
 Modules and functions explanations
 ----------------------------------
 
-orbital_visualization_app
+orbital_visualizator_app
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This module allows to invoke a graphic user interface and plot the entered orbit around Earth.
