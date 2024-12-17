@@ -2,9 +2,6 @@ make.exe --dry-run --always-make --keep-going --print-directory
 make.exe: entrant dans le r�pertoire � c:/Users/Baptiste/Desktop/dossier baba/ESTACA/5A/Python_Project/Orbital_Visualizator �
 pip install .
 pytest tests
- 
-make.exe: *** Pas de r�gle pour fabriquer la cible � sphinx �, n�cessaire pour � all �.
-
 coverage run --source src/Orbital_Visualizator -m pytest
 coverage report
 make.exe: quittant le r�pertoire � c:/Users/Baptiste/Desktop/dossier baba/ESTACA/5A/Python_Project/Orbital_Visualizator �
