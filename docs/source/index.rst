@@ -19,6 +19,10 @@ It contains 4 modules and 1 main as example:
 - __main__
 
 
+There are also instructions at the end about testing.
+
+**Warning** ``test_visualization`` **test requires interaction as it involves graphic user interface. For the test, a TLE can can be found in** ``tle_example.txt``.
+
 
 Modules and functions explanations
 ----------------------------------
@@ -183,6 +187,115 @@ main():
 ~~~~~~~
 
 Execute the main method of this package
+
+:param: None.
+:return: None.
+
+
+
+Testing
+-------
+
+
+There are 5 tests implemented in this package:
+
+- test_keplerian_to_cartesian_convertor
+- test_plot_orbit
+- test_plot_planet
+- test_submit_button
+- test_visualization
+
+
+test_keplerian_to_cartesian_convertor:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This test allows to verify the function orbit_calculation converts well Keplerian coordinates into Cartesian coordinates.
+
+test_calcul_orbit()->None:
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This function test convertion from Keplerian to Cartesian coordinates for a satellite with the following orbit:
+
+:a: 36000 km
+:e: 0.00025
+:i: 0.45 rad
+:RAAN: 0.48 rad
+:OMEGA: 0.58 rad
+:M:  1.25 rad
+
+These values were taken randomly just to check.
+
+:param: None.
+:return: None.
+
+test_plot_orbit:
+^^^^^^^^^^^^^^^^
+
+This test allows to verify if the function plot_orbit doesn't crash.
+
+test_display_orbit():
+~~~~~~~~~~~~~~~~~~~~~
+
+This function verifies that plot_orbit doesn't crash.
+
+:param: None.
+:return: None.
+
+test_plot_planet:
+^^^^^^^^^^^^^^^^^
+
+This test allows to verify if the function plot_central_body doesn't crash.
+
+test_display_planete():
+~~~~~~~~~~~~~~~~~~~~~~~
+
+This function verifies that plot_central doesn't crash.
+
+:param: None.
+:return: None.
+
+test_submit_button:
+^^^^^^^^^^^^^^^^^^^
+
+These test allow to verify if the function submit_parameters well interpreted datas from user to good format data into Cartesian coordinates.
+
+
+test_submit():
+~~~~~~~~~~~~~~
+
+This function verifies if the function submit_parameters well interpret datas from user to good format data
+Data entered by user are the following:
+
+For TLE  (ISS)
+
+``1 25544U 98067A   14273.50403866  .00012237  00000-0  21631-3 0  1790
+2 25544  51.6467 297.5710 0002045 126.1182  27.2142 15.50748592907666``
+
+For keplerian
+
+:a: 36000 km
+:e: 0.002
+:i: 0.25 rad
+:raan: 0.35 rad
+:omega: 0.56 rad
+:m: 1.87 rad
+
+:param: None.
+:return: None.
+
+test_visualization:
+^^^^^^^^^^^^^^^^^^^
+
+This test allows to verify if the function orbite_vizalization works properly without any bug.
+
+test_application():
+~~~~~~~~~~~~~~~~~~~
+
+This function verifies if the function orbite_vizalization works properly without any bug.
+Data entered by user are the following:
+:datasource: "tle"
+
+**Warning** This test requires interaction as it involves graphic user interface. For the test, a TLE can can be found in ``tle_example.txt``.
 
 :param: None.
 :return: None.
